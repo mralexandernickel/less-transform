@@ -1,0 +1,23 @@
+// 
+//  CSS3 Transforms as a handy LESS Mixin
+//
+//  for a Reference of possible Transformations, please visit the given Links below.
+//  ...and yes, I'm sure adding a w3schools link here. The Syntax Table in this case is imo quite useful ;-)
+//  
+//  @author Alexander Nickel <mr.alexander.nickel@gmail.com>
+//  @date 2013-05-09T20:11:51Z
+//  @see http://www.w3.org/TR/css3-transforms/
+//  @see http://www.w3schools.com/cssref/css3_pr_transform.asp
+//
+//  To define Animation Speed, you'll need to edit the CSS3 Transition Property, for this:
+//  @see https://github.com/mralexandernickel/less-easing
+//
+@transformationDefault: rotate(180deg);
+
+.transform(@transformation: @transformationDefault) {
+  -webkit-transform: @transformation;
+     -moz-transform: @transformation;
+      -ms-transform: @transformation;
+       -o-transform: @transformation;
+          transform: @transformation;
+}
